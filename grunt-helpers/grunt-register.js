@@ -12,6 +12,7 @@ module.exports = function (grunt, options) {
     'scssstyleIfEnabled',
     'typescriptIfEnabled',
     'traceurIfEnabled',
+    'babelIfEnabled',
     'mkdirTmpStyles',
     'newer:webfontIfEnabled',
     'hamlIfEnabled',

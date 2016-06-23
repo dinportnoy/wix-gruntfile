@@ -48,7 +48,9 @@ module.exports = function (grunt, options) {
     plugins = plugins.concat(options.inline ? ['grunt-extract-styles', 'grunt-wix-inline'] : []);
     plugins = plugins.concat(options.svgFontName ? ['grunt-webfont'] : []);
     plugins = plugins.concat(options.autoprefixer ? ['grunt-autoprefixer'] : []);
-    plugins = plugins.concat(featureDetector.isTraceurEnabled() ? ['grunt-traceur-latest'] : []);
+    plugins = plugins.concat(!options.babelEnabled && featureDetector.isTraceurEnabled() ? ['grunt-traceur-latest'] : []);
+    plugins = plugins.concat(options.babelEnabled && featureDetector.isBabelEnabled() ? ['grunt-babel'] : []);
+    console.log('======\nbabel-enabled\n====', options.babelEnabled && featureDetector.isBabelEnabled());
     plugins = plugins.concat(featureDetector.isTypescriptEnabled() ? ['grunt-ts'] : []);
     plugins = plugins.concat(featureDetector.isHamlEnabled() ? ['grunt-haml2html-shahata'] : []);
     plugins = plugins.concat(featureDetector.isVelocityEnabled() ? ['grunt-velocity-parser'] : []);

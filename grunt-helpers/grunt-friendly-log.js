@@ -7,6 +7,7 @@ module.exports = function (grunt) {
     'tslint:all': 'Running Linters',
     'ts:build': 'Transpiling Typescript',
     'traceur': 'Traspiling ES6',
+    'babel': 'Traspiling ES6',
     'webfont:icons': 'Building Font icons',
     'haml:dist': 'Compiling Haml',
     'sass:dist': 'Running Sass',

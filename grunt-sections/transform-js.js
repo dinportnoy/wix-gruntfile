@@ -52,6 +52,13 @@ module.exports = function (grunt, options) {
       grunt.task.run('newer:traceur');
     }
   });
+
+  grunt.registerTask('babelIfEnabled', 'Transpile ES6 code', function () {
+    if (grunt.task.exists('babel') && options.babelEnabled && featureDetector.isBabelEnabled()) {
+      grunt.task.run('newer:babel');
+    }
+  });
+
   var createDeclaration = options.bowerComponent;
 
   var typeScriptConfig;
@@ -116,6 +123,35 @@ module.exports = function (grunt, options) {
         stripInternal: true
       },
       build: typeScriptConfig
+    },
+
+    babel: {
+      options: {
+        sourceMap: true,
+        presets: ['es2015']
+      },
+      build: {
+        files: [{
+          expand: true,
+          cwd: 'app',
+          src: ['{modules,scripts}/**/*.js', '{modules,scripts}/**/*.es6'],
+          dest: '.tmp'
+        }]
+      },
+      test: {
+        files: [{
+          expand: true,
+          cwd: 'test',
+          src: ['**/*.js'],
+          dest: '.tmp/test'
+        },
+        {
+          expand: true,
+          cwd: 'app',
+          src: ['test/**/*.js'],
+          dest: '.tmp'
+        }]
+      }
     }
   };
 };

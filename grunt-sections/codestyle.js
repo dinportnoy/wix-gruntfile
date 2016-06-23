@@ -2,7 +2,7 @@
 
 var featureDetector = require('../feature-detector');
 
-module.exports = function (grunt) {
+module.exports = function (grunt, options) {
   var tslint = 'newer:tslint';
 
   grunt.registerTask('force-jshint', function () {
