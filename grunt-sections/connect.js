@@ -23,11 +23,18 @@ module.exports = function (grunt, options) {
 
   function proxyFolderWithWebSocket(src, dest) {
     var proxyWsMiddleware = require('http-proxy-middleware');
+    if (src[src.length-1] === '/') {
+      src = src.slice(0, -1);
+    }
     return proxyWsMiddleware(src, {
       target: grunt.template.process(dest),
       ws: true,
+      // logLevel: 'debug',
+      changeOrigin: true,
       pathRewrite: function (path, req) {
-        return path.replace(src, '');
+        var newpath = path.replace(src, '');
+        // console.log(path, newpath, src);
+        return newpath;
       }
     });
   }
