@@ -73,7 +73,7 @@ module.exports = function (grunt, options) {
   ]);
 
   grunt.registerTask('serve', [
-    'verify-npm',
+    // 'verify-npm',
     'ignore-code-style-checks',
     'karma:unit',
     'clean:ts',
@@ -122,7 +122,7 @@ module.exports = function (grunt, options) {
   require('../grunt-sections/fedops')(grunt);
 
   grunt.registerTask('build', [
-    'verify-npm',
+    // 'verify-npm',
     'pre-build:clean',
     'karma:single',
     'package',
