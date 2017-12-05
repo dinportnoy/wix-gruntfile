@@ -73,9 +73,13 @@ module.exports = function (grunt, options) {
   ]);
 
   grunt.registerTask('serve', [
+<<<<<<< HEAD
+    // 'verify-npm',
+=======
     'migrate-to-scopes',
     'migrate-bower-artifactory',
-    // 'verify-npm',
+    'verify-npm',
+>>>>>>> upstream
     'ignore-code-style-checks',
     'karma:unit',
     'clean:ts',
@@ -126,7 +130,13 @@ module.exports = function (grunt, options) {
   require('../grunt-sections/fedops')(grunt);
 
   grunt.registerTask('build', [
+<<<<<<< HEAD
+    // 'verify-npm',
+=======
+    'migrate-to-scopes',
+    'migrate-bower-artifactory',
     'verify-npm',
+>>>>>>> upstream
     'pre-build:clean',
     'karma:single',
     'package',
