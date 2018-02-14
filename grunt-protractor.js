@@ -5,9 +5,14 @@ var spawn = require('cross-spawn');
 var grunt = require('grunt');
 var protractorDir = require.resolve('protractor/bin/elementexplorer.js').replace('elementexplorer.js', '');
 
+function insideCi() {
+  return process.env.BUILD_NUMBER || process.env.TEAMCITY_VERSION || process.env.CI;
+}
+
 module.exports = {
   updateWebdriver: function (done) {
-    var p = spawn('node', [protractorDir + '/webdriver-manager', 'update', '--versions.chrome', '2.28']);
+    const version = insideCi() ? '2.28' : '2.35';
+    var p = spawn('node', [protractorDir + '/webdriver-manager', 'update', '--versions.chrome', version]);
     p.stdout.pipe(process.stdout);
     p.stderr.pipe(process.stderr);
     p.on('exit', function (code) {

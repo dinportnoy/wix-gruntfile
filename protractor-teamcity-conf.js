@@ -9,6 +9,9 @@ try {
 }
 var config = require('./protractor-conf').config;
 
+//temporary, needs to be removed when we upgrade to protractor 4.0
+config.chromeDriver = require.resolve('chromedriver/bin/chromedriver');
+
 if (process.env.IS_BUILD_AGENT) {
   var onPrepare = config.onPrepare || function () {};
   config.capabilities.maxInstances = parseInt(process.env.PROTRACTOR_SHARDS, 10) || 6;
