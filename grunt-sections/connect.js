@@ -69,6 +69,7 @@ module.exports = function (grunt, options) {
       mountFolder(connect, 'app/test', 86400000),
       mountFolder(connect, 'dist-angular', 86400000),
       mountFolder(connect, 'dist', 86400000)
+      
     ]).concat(grunt.config('yeoman').e2eTestServer ? [proxyFolder('/_api/', '<%= yeoman.e2eTestServer %>')] : [])
       .concat([connect.urlencoded()])
       .concat(getProxies('proxies'));
@@ -96,6 +97,7 @@ module.exports = function (grunt, options) {
             mountFolder(connect, 'test'),
             mountFolder(connect, 'app/test'),
             mountFolder(connect, 'app'),
+            mountFolder(connect, 'node_modules'),
             proxyFolder('/wcservices/', '<%= yeoman.api %>'.replace('_api', 'wcservices')),
             proxyFolder('/_api/', '<%= yeoman.api %>'),
             proxyFolder('/_partials/', '<%= yeoman.partials %>'),
@@ -119,7 +121,8 @@ module.exports = function (grunt, options) {
             mountFolder(connect, '.tmp'),
             mountFolder(connect, 'test'),
             mountFolder(connect, 'app/test'),
-            mountFolder(connect, 'app')
+            mountFolder(connect, 'app'),
+            mountFolder(connect, 'node_modules'),
           ]).concat(grunt.config('yeoman').e2eTestServer ? [proxyFolder('/_api/', '<%= yeoman.e2eTestServer %>')] : [])
             .concat([connect.urlencoded()])
             .concat(getProxies('proxies'));
