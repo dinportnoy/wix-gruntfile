@@ -100,6 +100,7 @@ module.exports = function (grunt, options) {
             mountFolder(connect, 'node_modules'),
             proxyFolder('/wcservices/', '<%= yeoman.api %>'.replace('_api', 'wcservices')),
             proxyFolder('/_api/', '<%= yeoman.api %>'),
+            proxyFolder('/quix/', '<%= yeoman.api %>'),
             proxyFolder('/_partials/', '<%= yeoman.partials %>'),
             proxyFolder('/_livereload/', 'http://localhost:<%= connect.options.livereload %>/'),
             connect.urlencoded()
@@ -150,6 +151,7 @@ module.exports = function (grunt, options) {
             mountFolder(connect, 'dist-angular'),
             mountFolder(connect, 'dist'),
             proxyFolder('/_api/', '<%= yeoman.api %>'),
+            proxyFolder('/quix/', '<%= yeoman.api %>'),
             proxyFolder('/_partials/', '<%= yeoman.partials %>'),
             connect.urlencoded()
           ]).concat(getProxies('proxies'));
