@@ -30,7 +30,7 @@ module.exports = function (grunt, options) {
       return '' +
         '<!-- #if( !${debug} ) -->\n' +
         block + '\n' +
-        '<!-- #else -#if( false )#end->\n' +
+        '<!-- #else - #if( false )#end ->\n' +
         original +
         '<!-- #end -->';
     }
