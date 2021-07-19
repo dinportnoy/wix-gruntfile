@@ -4554,6 +4554,11 @@
         "is-property": "^1.0.0"
       }
     },
+    "get-caller-file": {
+      "version": "1.0.3",
+      "resolved": "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/get-caller-file/-/get-caller-file-1.0.3.tgz",
+      "integrity": "sha1-+Xj6TJDR3+f/LWvtoqUV5xO9z0o="
+    },
     "get-intrinsic": {
       "version": "1.1.1",
       "resolved": "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/get-intrinsic/-/get-intrinsic-1.1.1.tgz",
@@ -6047,6 +6052,89 @@
         "each-async": "^1.0.0",
         "node-sass": "^3.7.0",
         "object-assign": "^4.0.1"
+      },
+      "dependencies": {
+        "cross-spawn": {
+          "version": "3.0.1",
+          "resolved": "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/cross-spawn/-/cross-spawn-3.0.1.tgz",
+          "integrity": "sha1-ElYDfsufDF9549bvE14wdwGEuYI=",
+          "requires": {
+            "lru-cache": "^4.0.1",
+            "which": "^1.2.9"
+          }
+        },
+        "gaze": {
+          "version": "1.1.3",
+          "resolved": "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/gaze/-/gaze-1.1.3.tgz",
+          "integrity": "sha1-xEFzPhO5J6yMD/C0w7Az8ogSkko=",
+          "requires": {
+            "globule": "^1.0.0"
+          }
+        },
+        "glob": {
+          "version": "7.1.7",
+          "resolved": "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/glob/-/glob-7.1.7.tgz",
+          "integrity": "sha1-Oxk+kjPwHULQs/eClLvutBj5SpA=",
+          "requires": {
+            "fs.realpath": "^1.0.0",
+            "inflight": "^1.0.4",
+            "inherits": "2",
+            "minimatch": "^3.0.4",
+            "once": "^1.3.0",
+            "path-is-absolute": "^1.0.0"
+          }
+        },
+        "globule": {
+          "version": "1.3.2",
+          "resolved": "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/globule/-/globule-1.3.2.tgz",
+          "integrity": "sha1-2L3Z6eTu+PluJFmZpd7n612FKcQ=",
+          "requires": {
+            "glob": "~7.1.1",
+            "lodash": "~4.17.10",
+            "minimatch": "~3.0.2"
+          }
+        },
+        "lodash.assign": {
+          "version": "4.2.0",
+          "resolved": "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/lodash.assign/-/lodash.assign-4.2.0.tgz",
+          "integrity": "sha1-DZnzzNem0mHRm9rrkkUAXShYCOc="
+        },
+        "lodash.clonedeep": {
+          "version": "4.5.0",
+          "resolved": "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz",
+          "integrity": "sha1-4j8/nE+Pvd6HJSnBBxhXoIblzO8="
+        },
+        "minimatch": {
+          "version": "3.0.4",
+          "resolved": "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/minimatch/-/minimatch-3.0.4.tgz",
+          "integrity": "sha1-UWbihkV/AzBgZL5Ul+jbsMPTIIM=",
+          "requires": {
+            "brace-expansion": "^1.1.7"
+          }
+        },
+        "node-sass": {
+          "version": "3.13.1",
+          "resolved": "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/node-sass/-/node-sass-3.13.1.tgz",
+          "integrity": "sha1-ckD7v/I5YwS0IjUn7TAgWJwAT8I=",
+          "requires": {
+            "async-foreach": "^0.1.3",
+            "chalk": "^1.1.1",
+            "cross-spawn": "^3.0.0",
+            "gaze": "^1.0.0",
+            "get-stdin": "^4.0.1",
+            "glob": "^7.0.3",
+            "in-publish": "^2.0.0",
+            "lodash.assign": "^4.2.0",
+            "lodash.clonedeep": "^4.3.2",
+            "meow": "^3.7.0",
+            "mkdirp": "^0.5.1",
+            "nan": "^2.3.2",
+            "node-gyp": "^3.3.1",
+            "npmlog": "^4.0.0",
+            "request": "^2.61.0",
+            "sass-graph": "^2.1.1"
+          }
+        }
       }
     },
     "grunt-scss-lint": {
@@ -11471,6 +11559,11 @@
       "resolved": "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/require-directory/-/require-directory-2.1.1.tgz",
       "integrity": "sha1-jGStX9MNqxyXbiNE/+f3kqam30I="
     },
+    "require-main-filename": {
+      "version": "1.0.1",
+      "resolved": "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/require-main-filename/-/require-main-filename-1.0.1.tgz",
+      "integrity": "sha1-l/cXtp1IeE9fUmpsWqj/3aBVpNE="
+    },
     "require-uncached": {
       "version": "1.0.3",
       "resolved": "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/require-uncached/-/require-uncached-1.0.3.tgz",
@@ -11633,6 +11726,75 @@
       "version": "2.1.2",
       "resolved": "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/safer-buffer/-/safer-buffer-2.1.2.tgz",
       "integrity": "sha1-RPoWGwGHuVSd2Eu5GAL5vYOFzWo="
+    },
+    "sass-graph": {
+      "version": "2.2.6",
+      "resolved": "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/sass-graph/-/sass-graph-2.2.6.tgz",
+      "integrity": "sha1-Cf2g5Ch0gOPklntyotEzugm42Cc=",
+      "requires": {
+        "glob": "^7.0.0",
+        "lodash": "^4.0.0",
+        "scss-tokenizer": "^0.2.3",
+        "yargs": "^7.0.0"
+      },
+      "dependencies": {
+        "camelcase": {
+          "version": "3.0.0",
+          "resolved": "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/camelcase/-/camelcase-3.0.0.tgz",
+          "integrity": "sha1-MvxLn82vhF/N9+c7uXysImHwqwo="
+        },
+        "cliui": {
+          "version": "3.2.0",
+          "resolved": "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/cliui/-/cliui-3.2.0.tgz",
+          "integrity": "sha1-EgYBU3qRbSmUD5NNo7SNWFo5IT0=",
+          "requires": {
+            "string-width": "^1.0.1",
+            "strip-ansi": "^3.0.1",
+            "wrap-ansi": "^2.0.0"
+          }
+        },
+        "glob": {
+          "version": "7.1.7",
+          "resolved": "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/glob/-/glob-7.1.7.tgz",
+          "integrity": "sha1-Oxk+kjPwHULQs/eClLvutBj5SpA=",
+          "requires": {
+            "fs.realpath": "^1.0.0",
+            "inflight": "^1.0.4",
+            "inherits": "2",
+            "minimatch": "^3.0.4",
+            "once": "^1.3.0",
+            "path-is-absolute": "^1.0.0"
+          }
+        },
+        "minimatch": {
+          "version": "3.0.4",
+          "resolved": "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/minimatch/-/minimatch-3.0.4.tgz",
+          "integrity": "sha1-UWbihkV/AzBgZL5Ul+jbsMPTIIM=",
+          "requires": {
+            "brace-expansion": "^1.1.7"
+          }
+        },
+        "yargs": {
+          "version": "7.1.2",
+          "resolved": "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/yargs/-/yargs-7.1.2.tgz",
+          "integrity": "sha1-Y6Cl1CFDh5/bswNwdBN04GQdVds=",
+          "requires": {
+            "camelcase": "^3.0.0",
+            "cliui": "^3.2.0",
+            "decamelize": "^1.1.1",
+            "get-caller-file": "^1.0.1",
+            "os-locale": "^1.4.0",
+            "read-pkg-up": "^1.0.1",
+            "require-directory": "^2.1.1",
+            "require-main-filename": "^1.0.1",
+            "set-blocking": "^2.0.0",
+            "string-width": "^1.0.2",
+            "which-module": "^1.0.0",
+            "y18n": "^3.2.1",
+            "yargs-parser": "^5.0.1"
+          }
+        }
+      }
     },
     "satisfaction": {
       "version": "1.1.0",
@@ -14160,6 +14322,11 @@
         "is-weakset": "^2.0.1"
       }
     },
+    "which-module": {
+      "version": "1.0.0",
+      "resolved": "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/which-module/-/which-module-1.0.0.tgz",
+      "integrity": "sha1-u6Y8qGGUiZT/MHc2CJ47lgJsKk8="
+    },
     "which-typed-array": {
       "version": "1.1.4",
       "resolved": "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/which-typed-array/-/which-typed-array-1.1.4.tgz",
@@ -14291,6 +14458,15 @@
       "resolved": "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/wordwrap/-/wordwrap-0.0.2.tgz",
       "integrity": "sha1-t5Zpu0LstAn4PVg8rVLKF+qhZD8="
     },
+    "wrap-ansi": {
+      "version": "2.1.0",
+      "resolved": "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/wrap-ansi/-/wrap-ansi-2.1.0.tgz",
+      "integrity": "sha1-2Pw9KE3QV5T+hJc8rs3Rz4JP3YU=",
+      "requires": {
+        "string-width": "^1.0.1",
+        "strip-ansi": "^3.0.1"
+      }
+    },
     "wrap-fn": {
       "version": "0.1.5",
       "resolved": "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/wrap-fn/-/wrap-fn-0.1.5.tgz",
@@ -14399,6 +14575,22 @@
         "os-locale": "^1.4.0",
         "window-size": "^0.1.2",
         "y18n": "^3.2.0"
+      }
+    },
+    "yargs-parser": {
+      "version": "5.0.1",
+      "resolved": "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/yargs-parser/-/yargs-parser-5.0.1.tgz",
+      "integrity": "sha1-ft4ynB2M274gm9Jc25kOmx67s5Q=",
+      "requires": {
+        "camelcase": "^3.0.0",
+        "object.assign": "^4.1.0"
+      },
+      "dependencies": {
+        "camelcase": {
+          "version": "3.0.0",
+          "resolved": "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/camelcase/-/camelcase-3.0.0.tgz",
+          "integrity": "sha1-MvxLn82vhF/N9+c7uXysImHwqwo="
+        }
       }
     },
     "yauzl": {
